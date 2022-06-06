@@ -59,4 +59,40 @@ const data = [
         "name": "bird",
         "colors": ["white", "black", "brown"]
     },
+    {
+        "name": "eye",
+        "colors": ["hazel", "green", "blue", "black", "brown"]
+    },
+    {
+        "name": "arm",
+        "colors": ["brown"]
+    },
+    {
+        "name": "street",
+        "colors": ["black"]
+    },
+    {
+        "name": "ant",
+        "colors": ["black", "white"]
+    },
+    {
+        "name": "rabbit",
+        "colors": ["white", "black", "brown"]
+    },
+    {
+        "name": "house",
+        "colors": ["white", "brown", "pink", "blue", "green"]
+    },
+    {
+        "name": "sand",
+        "colors": ["pale", "brown", "red"]
+    },
+    {
+        "name": "table",
+        "colors": ["white", "brown"]
+    },
+    {
+        "name": "light",
+        "colors": ["white", "yellow"]
+    },
 ]

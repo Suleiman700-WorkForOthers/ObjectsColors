@@ -7,20 +7,32 @@ $btn.addEventListener('click', (e) => {
     // Get search string
     const search_string = document.getElementById('search_string').value
 
+
     // Get objects that equal search string
     const res = colors.filter(color => {
-        return color.name === search_string
+        return color.name === search_string.toLowerCase()
     })
 
-    // Get object colors
-    const objColors = res[0].colors
+    if (res.length) {
+        document.getElementById('paragraph').innerHTML = `${search_string} can contain the following colors:`
+        document.getElementById('paragraph').style.display = 'block'
+        document.getElementById('colors').style.display = 'block'
 
-    // Clear colors in html
-    $colors_div.textContent = ''
+        // Get object colors
+        const objColors = res[0].colors
 
-    // Add colors to html
-    objColors.forEach(color => {
-        let p = document.createElement("p")
-        $colors_div.append(color, p)
-    })
+        // Clear colors in html
+        $colors_div.textContent = ''
+
+        // Add colors to html
+        objColors.forEach(color => {
+            let p = document.createElement("p")
+            $colors_div.append(color, p)
+        })
+    } else {
+        document.getElementById('paragraph').innerHTML = `No data found for: ${search_string}`
+        document.getElementById('colors').style.display = 'none'
+    }
+
+
 })
